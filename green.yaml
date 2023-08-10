@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blue-deployment
+  name: green-deployment
   labels:
     app: blue
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: blue
+      app: green
   template:
     metadata:
       labels:
-        app: blue
+        app: green
     spec:
       containers:
-      - name: blue-container
-        image: koutuk16/blue
+      - name: green-container
+        image: koutuk16/green
         ports:
         - containerPort: 80
